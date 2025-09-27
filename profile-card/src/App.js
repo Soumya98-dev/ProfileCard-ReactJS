@@ -1,6 +1,57 @@
 import './App.css';
 import myPic from './assets/WhatsApp Image 2024-03-06 at 12.35.11 AM.jpeg';
 
+const skills = [
+  {
+    name: "HTML + CSS",
+    level: "advanced",
+    color: "#2662EA"
+  },
+  {
+    name: "JavaScript",
+    level: "advanced",
+    color: "#EFD81D"
+  },
+  {
+    name: "Web Design",
+    level: "advanced",
+    color: "#C3DCAF"
+  },
+  {
+    name: "Git & GitHub",
+    level: "intermediate",
+    color: "#E84F33"
+  },
+  {
+    name: "React",
+    level: "advanced",
+    color: "#60DAFB"
+  },
+  {
+    name: "Java",
+    level: "advanced",
+    color: "#FF3B00"
+  },
+  {
+    name: "Spring Boot",
+    level: "beginner",
+    color: "#60DAFB"
+  }
+];
+
+const levelEmoji = {
+  beginner: "👶🏻",
+  intermediate: "👍",
+  advanced: "💪"
+}
+
+function Skill({keyName, name, color, level}){
+  return(
+      <span key={keyName} className='skill' style={{background: color}}>{name} {levelEmoji[level]}</span>
+  );
+};
+
+
 function App() {
   return (
    <div className='main-container'>
@@ -16,12 +67,16 @@ in the end-to-end development of user-centric, high-performance solutions.</p>
     </div>
     <div className='skills'>
       <div className='skills-box'>
-        <span className='skill html'>HTML + CSS 💪</span>
-        <span className='skill js'>JavaScript 💪</span>
-        <span className='skill web'>Web Design 💪</span>
-        <span className='skill git'>Git & GitHub 👍</span>
-        <span className='skill react'>React 💪</span>
-        <span className='skill java'>Java 💪</span>
+        {
+          skills.map(skill => (
+            <Skill
+              key = {skill.name}
+              name = {skill.name}
+              color = {skill.color}
+              level = {skill.level}
+            />
+          ))
+        }
       </div>
     </div>
    </div>
