@@ -1,0 +1,81 @@
+.main-container {
+  border: 5px solid black;
+  width: 32rem;
+  height: auto;
+  margin: 30px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.my-name h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.about {
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 90%;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 400;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.image img {
+  width: 32rem;
+  height: 25rem;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.skills {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.skills-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.skills-box span {
+  padding: 4px 8px;
+  font-weight: 600;
+}
+
+.skill {
+  border-radius: 8px;
+}
+
+.skill.html {
+  background: #4dabf7;
+}
+
+.skill.js {
+  background: #ffd43b;
+}
+
+.skill.web {
+  background: #a3e635;
+}
+.skill.git {
+  background: #f87171;
+}
+.skill.react {
+  background: #60a5fa;
+}
+.skill.java {
+  background: #f59e0b;
+}
